@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Bun Bun</title>
+    <meta charset="UTF-8" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap"
+      rel="stylesheet"
+    />
+    <script defer src="./interactions.js"></script>
+  </head>
+</html>
+
+<body>
+  <!-- navbar start -->
+  <div class="orderNowBackground">
+    <div class="navbar">
+      <!-- logo start -->
+      <a href="./bunBunHome.html">
+        <div class="icon">
+          <img src="./Assets/logo.svg" alt="Bun Bun logo" class="logo" />
+          <h2 class="logoPrint">Bun Bun</h2>
+        </div>
+      </a>
+      <!-- logo end -->
+      <div class="menu">
+        <ul>
+          <!-- order now -->
+          <li>
+            <a href="./orderNow.html" id="orderNowRect">order now</a>
+          </li>
+          <!-- contact us -->
+          <li>
+            <a href="./contactUs.html">contact us</a>
+          </li>
+          <!-- shopping cart -->
+          <li>
+            <a href="#"
+              ><img src="./Assets/shoppingCart.svg" class="shoppingCart"
+            /></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <!-- navbar end-->
+
+<!-- back button and progress bar -->
+<div class="progress">
+    <img src="./Assets/backButton.svg" class="backButton">
+    <img src="./Assets/progressBar2.svg" class="progressBarImg">
+</div>
+
+<!-- progress bar labels -->
+<center>
+  <div class="progressBarLabels">
+    <p class="progressBarLabel">pack size</p>
+    <p class="progressBarLabel">customize</p>
+    <p class="progressBarLabel">confirm</p>
+  </div>
+  <p class="selectionsLeft">0/6</p>
+</center>
+
+<!-- scroll through bun options -->
+<div class="optionsPanel">
+  <!-- original -->
+  <div class="flavors" id="original">
+    <img src="./Assets/original.svg" class="flavorImg">
+    <p class="flavorLabel">Original</p>
+    <img src="./Assets/dummyAmountSelector.svg" class="dummyAmountSelector">
+    <button data-modal-target="#originalOverlay" class="infoButton"><img src="./Assets/infoButton.svg"></button>
+    <img src="./Assets/optionsSeparater.svg" class="optionsSeparater">
+  </div>
+  <!-- blueberry -->
+  <div class="flavors" id="blueberry">
+    <img src="./Assets/blueberry.svg" class="flavorImg">
+    <p class="flavorLabel">Blueberry</p>
+    <img src="./Assets/dummyAmountSelector.svg" class="dummyAmountSelector">
+    <img src="./Assets/infoButton.svg" class="infoButton">
+    <img src="./Assets/optionsSeparater.svg" class="optionsSeparater">
+  </div>
+  <!-- walnut -->
+  <div class="flavors" id="walnut">
+    <img src="./Assets/walnut.svg" class="flavorImg">
+    <p class="flavorLabel">Walnut</p>
+    <img src="./Assets/dummyAmountSelector.svg" class="dummyAmountSelector">
+    <img src="./Assets/infoButton.svg" class="infoButton">
+    <img src="./Assets/optionsSeparater.svg" class="optionsSeparater">
+  </div>
+  <!-- original (gluten-free) -->
+  <div class="flavors" id="original (gluten-free)">
+    <img src="./Assets/originalGlutenFree.svg" class="flavorImg">
+    <p class="flavorLabel">Original (gluten-free)</p>
+    <img src="./Assets/dummyAmountSelector.svg" class="dummyAmountSelector">
+    <img src="./Assets/infoButton.svg" class="infoButton">
+    <img src="./Assets/optionsSeparater.svg" class="optionsSeparater">
+  </div>
+  <!-- pumpkin spice -->
+  <div class="flavors" id="pumpkin spice">
+    <img src="./Assets/pumpkinSpice.svg" class="flavorImg">
+    <p class="flavorLabel">Pumpkin Spice</p>
+    <img src="./Assets/dummyAmountSelector.svg" class="dummyAmountSelector">
+    <img src="./Assets/infoButton.svg" class="infoButton">
+    <img src="./Assets/optionsSeparater.svg" class="optionsSeparater">
+  </div>
+  <!-- caramel pecan -->
+  <div class="flavors" id="caramel pecan">
+    <img src="./Assets/caramelPecan.svg" class="flavorImg">
+    <p class="flavorLabel">Caramel Pecan</p>
+    <img src="./Assets/dummyAmountSelector.svg" class="dummyAmountSelector">
+    <img src="./Assets/infoButton.svg" class="infoButton">
+    <img src="./Assets/optionsSeparater.svg" class="optionsSeparater">
+  </div>
+</div>
+
+<!-- next button -->
+<div>
+  <img src="./Assets/inactiveNextButton.svg" class="inactiveNext">
+</div>
+
+<!-- hidden overlays -->
+<div class="originalOverlay" id="originalOverlay">
+  <!-- overlay header-->
+  <div class="overlayHeader">
+    <button data-close-button class="close"><img src="./Assets/close.svg"></button>
+  </div>
+  <!-- overlay body -->
+  <div class="overlayDetails">
+    <img src="./Assets/originalDetails.svg" alt="originalOverlay">
+  </div>
+  
+</div>
+
+<div id="overlay"></div>
+
+</body>
+</html>

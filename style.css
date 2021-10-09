@@ -6,9 +6,9 @@ header {
   text-align: center;
 }
 
-.main {
+.homeBackground {
   width: 100%;
-  background: url(file:///C:/Users/domin/Downloads/Homepage.svg);
+  background: url(./Assets/homepageBackground.svg);
   background-position: center;
   background-size: cover;
   height: 100vh;
@@ -58,7 +58,7 @@ body {
   position: absolute;
   width: 400px;
   height: 30px;
-  left: 230px;
+  left: 235px;
   top: 470px;
 
   font-family: Poppins;
@@ -77,27 +77,47 @@ body {
 }
 
 ul {
+  list-style-type: none;
   float: right;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-ul li {
-  list-style: none;
+ul li a {
+  list-style-type: none;
   margin-left: 60px;
+  color: #af8066;
+  transition: 0.4s, ease-in-out;
 }
 
-.navigationOptions {
-  font-family: Poppins;
-  font-size: 20px;
-  font-style: normal;
-  color: #af8066;
-  margin-top: -20px;
+ul li a:hover {
+  color: white;
 }
 
 .shoppingCart {
   margin-top: -8px;
+}
+
+#orderNowRect {
+  padding-bottom: 7px;
+  border-bottom: 5px solid #fa87da;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+#contactUsRect {
+  padding-bottom: 7px;
+  border-bottom: 5px solid #fa87da;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+#shoppingCartRect {
+  padding-bottom: 7px;
+  border-bottom: 5px solid #fa87da;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
 }
 
 .getStarted {
@@ -113,4 +133,177 @@ ul li {
   position: absolute;
   top: 200px;
   right: 10px;
+}
+
+td img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding-top: 30px;
+}
+
+.divItem {
+  margin: 0px 50px 0px 50px;
+  border: 4px solid #fa87da;
+  border-radius: 16px;
+  border-spacing: 100px;
+  width: 187px;
+  height: 187px;
+}
+
+.divItemSelect {
+  margin: 0px 50px 0px 50px;
+  border: 4px solid #fa87da;
+  border-radius: 16px;
+  border-spacing: 100px;
+  width: 187px;
+  height: 187px;
+  background: #fa87da;
+}
+
+table {
+  position: absolute;
+  left: 100px;
+  top: 300px;
+}
+
+.packLabel {
+  margin-top: 40px;
+}
+
+.inactiveNext {
+  position: absolute;
+  left: 1100px;
+  top: 650px;
+}
+
+.backButton {
+  position: absolute;
+  left: 60px;
+  top: 100px;
+}
+
+.progressBarImg {
+  position: absolute;
+  left: 40%;
+  top: 100px;
+}
+
+.progressBarLabel {
+  display: inline-block;
+  width: 90px;
+  padding-inline-end: 40px;
+  margin-top: 100px;
+}
+
+.progressBarLabels {
+  position: absolute;
+  left: 517px;
+}
+
+.selectionsLeft {
+  position: absolute;
+  top: 200px;
+  /* idk how to center elements, I just hard code it */
+  padding-left: 680px;
+  font-family: Poppins;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 17px;
+  line-height: 25px;
+
+  text-align: center;
+
+  color: #af8066;
+}
+
+.optionsPanel {
+  display: inline-block;
+  position: absolute;
+  width: 1010px;
+  height: 372px;
+  overflow-y: scroll;
+  margin: 200px 100px;
+}
+.flavors {
+  display: block;
+  margin: 20px 0px 20px 0px;
+}
+
+.flavorImg {
+  display: inline;
+  float: left;
+}
+
+.flavorLabel {
+  display: inline;
+  font-size: 22px;
+  line-height: 20px;
+  float: left;
+  padding-left: 10px;
+}
+
+.dummyAmountSelector {
+  display: inline;
+  float: left;
+  padding-left: 40px;
+}
+
+.infoButton {
+  display: inline;
+  float: right;
+  padding-right: 10px;
+}
+
+.optionsSeparater {
+  display: block;
+}
+
+.originalOverlay {
+  /* display: none; */
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  z-index: 10;
+}
+
+.originalOverlay.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.overlayHeader {
+  padding: 10px 15px; /* this might mess some shit up */
+  display: flex;
+}
+
+.overlayHeader .close {
+  position: fixed;
+  left: 980px;
+  border: none;
+  outline: none;
+  background: none;
+  float: right;
+  top: 50px;
+  cursor: pointer;
+}
+
+#overlay {
+  position: fixed;
+  opacity: 0;
+  transition: 200ms ease-in-out;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgb(0, 0, 0, 0.5);
+  pointer-events: none;
+}
+
+#overlay.active {
+  opacity: 1;
+  pointer-events: all;
 }
