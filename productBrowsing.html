@@ -79,7 +79,7 @@
     <img src="./Assets/blueberry.svg" class="flavorImg">
     <p class="flavorLabel">Blueberry</p>
     <img src="./Assets/dummyAmountSelector.svg" class="dummyAmountSelector">
-    <img src="./Assets/infoButton.svg" class="infoButton">
+    <button data-modal-target="#blueberryOverlay" class="infoButton"><img src="./Assets/infoButton.svg"></button>
     <img src="./Assets/optionsSeparater.svg" class="optionsSeparater">
   </div>
   <!-- walnut -->
@@ -87,7 +87,7 @@
     <img src="./Assets/walnut.svg" class="flavorImg">
     <p class="flavorLabel">Walnut</p>
     <img src="./Assets/dummyAmountSelector.svg" class="dummyAmountSelector">
-    <img src="./Assets/infoButton.svg" class="infoButton">
+    <button data-modal-target="#walnutOverlay" class="infoButton"><img src="./Assets/infoButton.svg"></button>
     <img src="./Assets/optionsSeparater.svg" class="optionsSeparater">
   </div>
   <!-- original (gluten-free) -->
@@ -95,7 +95,7 @@
     <img src="./Assets/originalGlutenFree.svg" class="flavorImg">
     <p class="flavorLabel">Original (gluten-free)</p>
     <img src="./Assets/dummyAmountSelector.svg" class="dummyAmountSelector">
-    <img src="./Assets/infoButton.svg" class="infoButton">
+    <button data-modal-target="#originalGlutenFreeOverlay" class="infoButton"><img src="./Assets/infoButton.svg"></button>
     <img src="./Assets/optionsSeparater.svg" class="optionsSeparater">
   </div>
   <!-- pumpkin spice -->
@@ -103,7 +103,7 @@
     <img src="./Assets/pumpkinSpice.svg" class="flavorImg">
     <p class="flavorLabel">Pumpkin Spice</p>
     <img src="./Assets/dummyAmountSelector.svg" class="dummyAmountSelector">
-    <img src="./Assets/infoButton.svg" class="infoButton">
+    <button data-modal-target="#pumpkinSpiceOverlay" class="infoButton"><img src="./Assets/infoButton.svg"></button>
     <img src="./Assets/optionsSeparater.svg" class="optionsSeparater">
   </div>
   <!-- caramel pecan -->
@@ -111,7 +111,7 @@
     <img src="./Assets/caramelPecan.svg" class="flavorImg">
     <p class="flavorLabel">Caramel Pecan</p>
     <img src="./Assets/dummyAmountSelector.svg" class="dummyAmountSelector">
-    <img src="./Assets/infoButton.svg" class="infoButton">
+    <button data-modal-target="#caramelPecanOverlay" class="infoButton"><img src="./Assets/infoButton.svg"></button>
     <img src="./Assets/optionsSeparater.svg" class="optionsSeparater">
   </div>
 </div>
@@ -121,7 +121,7 @@
   <img src="./Assets/inactiveNextButton.svg" class="inactiveNext">
 </div>
 
-<!-- hidden overlays -->
+<!-- original overlay -->
 <div class="originalOverlay" id="originalOverlay">
   <!-- overlay header-->
   <div class="overlayHeader">
@@ -131,7 +131,66 @@
   <div class="overlayDetails">
     <img src="./Assets/originalDetails.svg" alt="originalOverlay">
   </div>
-  
+</div>
+
+<!-- blueberry overlay -->
+<div class="blueberryOverlay" id="blueberryOverlay">
+  <!-- overlay header-->
+  <div class="overlayHeader">
+    <button data-close-button class="close"><img src="./Assets/close.svg"></button>
+  </div>
+  <!-- overlay body -->
+  <div class="overlayDetails">
+    <img src="./Assets/blueberryDetails.svg" alt="blueberryOverlay">
+  </div>
+</div>
+
+<!-- walnut overlay -->
+<div class="walnutOverlay" id="walnutOverlay">
+  <!-- overlay header-->
+  <div class="overlayHeader">
+    <button data-close-button class="close"><img src="./Assets/close.svg"></button>
+  </div>
+  <!-- overlay body -->
+  <div class="overlayDetails">
+    <img src="./Assets/walnutDetails.svg" alt="walnutOverlay">
+  </div>
+</div>
+
+<!-- original gluten-free overlay -->
+<div class="originalGlutenFreeOverlay" id="originalGlutenFreeOverlay">
+  <!-- overlay header-->
+  <div class="overlayHeader">
+    <button data-close-button class="close"><img src="./Assets/close.svg"></button>
+  </div>
+  <!-- overlay body -->
+  <div class="overlayDetails">
+    <img src="./Assets/originalGlutenFreeDetails.svg" alt="originalGlutenFreeOverlay">
+  </div>
+</div>
+
+<!-- pumpkin spice overlay -->
+<div class="pumpkinSpiceOverlay" id="pumpkinSpiceOverlay">
+  <!-- overlay header-->
+  <div class="overlayHeader">
+    <button data-close-button class="close"><img src="./Assets/close.svg"></button>
+  </div>
+  <!-- overlay body -->
+  <div class="overlayDetails">
+    <img src="./Assets/pumpkinSpiceDetails.svg" alt="pumpkinSpiceOverlay">
+  </div>
+</div>
+
+<!-- caramel pecan overlay -->
+<div class="caramelPecanOverlay" id="caramelPecanOverlay">
+  <!-- overlay header-->
+  <div class="overlayHeader">
+    <button data-close-button class="close"><img src="./Assets/close.svg"></button>
+  </div>
+  <!-- overlay body -->
+  <div class="overlayDetails">
+    <img src="./Assets/caramelPecanDetails.svg" alt="caramelPecanOverlay">
+  </div>
 </div>
 
 <div id="overlay"></div>

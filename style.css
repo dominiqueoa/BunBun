@@ -262,7 +262,6 @@ table {
 }
 
 .originalOverlay {
-  /* display: none; */
   position: fixed;
   top: 50%;
   left: 50%;
@@ -275,8 +274,73 @@ table {
   transform: translate(-50%, -50%) scale(1);
 }
 
+.blueberryOverlay {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  z-index: 10;
+}
+
+.blueberryOverlay.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.walnutOverlay {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  z-index: 10;
+}
+
+.walnutOverlay.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.originalGlutenFreeOverlay {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  z-index: 10;
+}
+
+.originalGlutenFreeOverlay.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.pumpkinSpiceOverlay {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  z-index: 10;
+}
+
+.pumpkinSpiceOverlay.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
+.caramelPecanOverlay {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(0);
+  transition: 200ms ease-in-out;
+  z-index: 10;
+}
+
+.caramelPecanOverlay.active {
+  transform: translate(-50%, -50%) scale(1);
+}
+
 .overlayHeader {
-  padding: 10px 15px; /* this might mess some shit up */
+  padding: 10px 15px;
   display: flex;
 }
 
