@@ -110,3 +110,83 @@ closeModalButtons.forEach((button) => {
     closeModal(popup)
   })
 })
+
+// original quantity selector functionality
+var numbers = document.getElementById("valueBox")
+var numbers1 = document.getElementById("valueBoxOverlay")
+var bunsLeft = document.getElementById("selectionsLeft")
+
+for (i = 0; i < 7; i++) {
+  var span = document.createElement("span")
+  var span1 = document.createElement("span")
+  var p = document.createElement("p")
+  span.textContent = i
+  span1.textContent = i
+  p.textContent = i
+  numbers.appendChild(span)
+  numbers1.appendChild(span1)
+  bunsLeft.appendChild(p)
+}
+var num = numbers.getElementsByTagName("span")
+var num1 = numbers1.getElementsByTagName("span")
+var buns = bunsLeft.getElementsByTagName("p")
+var index = 0
+
+function addOne() {
+  num[index].style.display = "none"
+  num1[index].style.display = "none"
+  buns[index].style.display = "none"
+  index = (index + 1) % num.length
+  num[index].style.display = "initial"
+  num1[index].style.display = "initial"
+  buns[index].style.display = "initial"
+}
+
+function subtractOne() {
+  num[index].style.display = "none"
+  num1[index].style.display = "none"
+  buns[index].style.display = "none"
+  index = (index - 1 + num.length) % num.length
+  num[index].style.display = "initial"
+  num1[index].style.display = "initial"
+  buns[index].style.display = "initial"
+}
+
+// blueberry quantity selector functionality
+var blueberry = document.getElementById("valueBoxBlueberry")
+
+for (i = 0; i < 7; i++) {
+  var span = document.createElement("span")
+  var p = document.createElement("p")
+  span.textContent = i
+  p.textContent = i
+  blueberry.appendChild(span)
+  bunsLeft.appendChild(p)
+}
+var blue = blueberry.getElementsByTagName("span")
+
+function addOneBlueberry() {
+  blue[index].style.display = "none"
+  buns[index].style.display = "none"
+  index = (index + 1) % blue.length
+  blue[index].style.display = "initial"
+  buns[index].style.display = "initial"
+}
+
+function subtractOneBlueberry() {
+  blue[index].style.display = "none"
+  buns[index].style.display = "none"
+  index = (index - 1 + blue.length) % blue.length
+  blue[index].style.display = "initial"
+  buns[index].style.display = "initial"
+}
+
+// cart open and close
+
+function show() {
+  document.getElementById("cart").classList.toggle("active")
+}
+
+function closeCart() {
+  document.getElementById("cart").classList.remove("active")
+}

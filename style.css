@@ -23,12 +23,12 @@ header {
 }
 
 .icon {
-  display: inline-block;
+  display: inline;
   float: left;
 }
 
 .logoPrint {
-  display: inline-block;
+  display: inline;
   font-family: Poppins;
   font-style: normal;
   font-weight: bold;
@@ -71,23 +71,26 @@ body {
 }
 
 .menu {
-  width: 780px;
+  display: flex;
   float: right;
   margin-right: 20px;
 }
 
-ul {
+.menu ul {
   list-style-type: none;
-  float: right;
+  width: 370px;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex: auto;
+  justify-content: space-between;
 }
 
-ul li a {
-  list-style-type: none;
-  margin-left: 60px;
+.menu ul li {
+  display: inline;
+}
+
+.menu ul li a {
   color: #af8066;
+  text-decoration: none;
   transition: 0.4s, ease-in-out;
 }
 
@@ -97,6 +100,8 @@ ul li a:hover {
 
 .shoppingCart {
   margin-top: -8px;
+  border: none;
+  background: none;
 }
 
 #orderNowRect {
@@ -118,6 +123,98 @@ ul li a:hover {
   border-bottom: 5px solid #fa87da;
   border-bottom-left-radius: 5px;
   border-bottom-right-radius: 5px;
+}
+
+#cart {
+  position: fixed;
+  right: 0;
+  left: 75%;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  justify-content: space-around;
+  transition: 0.5s ease-in-out;
+  background-color: #ffffff;
+  z-index: 10;
+  transform: translateX(102%);
+}
+
+#cart.active {
+  transform: translateX(0%);
+}
+
+.cartClose {
+  position: relative;
+  display: block;
+  top: 2%;
+  left: 2%;
+  border: none;
+  background: none;
+}
+
+#cart h1 {
+  font-size: 25px;
+}
+
+#cart ul {
+  list-style: none;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+  float: left;
+}
+
+.cartActions button {
+  border: none;
+  background: #ffd3f3;
+  box-shadow: -6px 6px 0px #fa87da;
+  border-radius: 16px;
+  transition: 0.25s ease-in-out;
+}
+
+.checkoutButton {
+  width: 166px;
+  height: 45px;
+}
+
+.checkoutButton h1 {
+  font-family: Poppins;
+  font-weight: bold;
+  font-size: 23px;
+  color: #af8066;
+  margin: auto;
+}
+
+.continueShoppingButton {
+  width: 240px;
+  height: 45px;
+}
+
+.continueShoppingButton h1 {
+  font-family: Poppins;
+  font-weight: bold;
+  font-size: 23px;
+  color: #af8066;
+  margin: auto;
+}
+
+.cartActions button:hover {
+  background: #ffbced;
+}
+
+.cartActions {
+  position: absolute;
+  left: 17%;
+  display: block;
+  height: 115px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  bottom: 0;
+  padding-bottom: 25px;
 }
 
 .getStarted {
@@ -163,10 +260,11 @@ td img {
   background: #fa87da;
 }
 
-table {
-  position: absolute;
-  left: 100px;
-  top: 300px;
+.packSizeTable {
+  /* position: absolute; */
+  margin: 50px auto 200px;
+  /* left: 100px;
+  top: 300px; */
 }
 
 .packLabel {
@@ -174,62 +272,103 @@ table {
 }
 
 .inactiveNext {
-  position: absolute;
-  left: 1100px;
-  top: 650px;
+  display: block;
+  margin-top: 20px;
+  margin-right: 5%;
+  float: right;
+}
+
+.progress {
+  display: flex;
+  width: 100%;
 }
 
 .backButton {
   position: absolute;
-  left: 60px;
-  top: 100px;
+  left: 3%;
+  top: 70px;
 }
 
 .progressBarImg {
-  position: absolute;
-  left: 40%;
-  top: 100px;
+  display: inline;
+  margin: 50px auto 0px;
 }
 
 .progressBarLabel {
-  display: inline-block;
-  width: 90px;
-  padding-inline-end: 40px;
-  margin-top: 100px;
+  display: inline;
 }
 
 .progressBarLabels {
-  position: absolute;
-  left: 517px;
+  display: flex;
+  margin: 0px auto;
+  text-align: center;
+  flex: auto;
+  justify-content: space-between;
+  width: 340px;
 }
 
-.selectionsLeft {
-  position: absolute;
-  top: 200px;
-  /* idk how to center elements, I just hard code it */
-  padding-left: 680px;
-  font-family: Poppins;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 17px;
-  line-height: 25px;
-
+.countdown {
+  display: flex;
+  margin: 0px auto;
   text-align: center;
-
+  align-items: center;
+  flex: auto;
+  justify-content: space-between;
+  width: 30px;
+  font-size: 17px;
   color: #af8066;
 }
 
+#selectionsLeft {
+  display: inline;
+}
+
+#selectionsLeft p {
+  display: none;
+  user-select: none;
+}
+
+#selectionsLeft p:nth-child(1) {
+  display: initial;
+}
+
+.totalAmountText {
+  display: inline;
+}
+
 .optionsPanel {
-  display: inline-block;
-  position: absolute;
-  width: 1010px;
+  display: block;
+  width: 1200px;
   height: 372px;
   overflow-y: scroll;
-  margin: 200px 100px;
+  margin: 0px auto;
 }
+
+/* width */
+::-webkit-scrollbar {
+  width: 9px;
+}
+
+/* track */
+::-webkit-scrollbar-track {
+  background: none;
+}
+
+/* bar */
+::-webkit-scrollbar-thumb {
+  background: #ffd3f3;
+  border-radius: 5px;
+}
+
+/* bar on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #ffbced;
+}
+
 .flavors {
   display: block;
-  margin: 20px 0px 20px 0px;
+  margin: 20px 0px;
+  overflow: hidden;
 }
 
 .flavorImg {
@@ -245,6 +384,132 @@ table {
   padding-left: 10px;
 }
 
+#originalOverlaySpinner {
+  position: absolute;
+  left: 455px;
+  top: 322px;
+  width: 198px;
+  height: 62px;
+  background: #ffd3f3;
+  border-radius: 6px;
+  transition: 0.5s;
+}
+
+.minusButtonOverlay {
+  width: 31px;
+  height: 31px;
+}
+
+.plusButtonOverlay {
+  width: 31px;
+  height: 31px;
+}
+
+#valueBoxOverlay span {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 15%;
+  text-align: center;
+  line-height: 39px;
+  display: none;
+  font-size: 26px;
+  user-select: none;
+}
+
+#valueBoxOverlay span:nth-child(1) {
+  display: initial;
+}
+
+/* #originalOverlaySquare {
+  position: absolute;
+  display: block;
+  top: 13%;
+  left: 38%;
+  width: 31px;
+  height: 31px;
+  background: #ffffff;
+  border-radius: 6px;
+} */
+
+.quantitySpinner {
+  position: relative;
+  display: flex;
+  float: left;
+  margin-left: 40px;
+  width: 131px;
+  height: 41px;
+  background: #ffd3f3;
+  border-radius: 6px;
+  transition: 0.5s;
+}
+
+.quantitySpinner .minusButton {
+  position: absolute;
+  top: 25%;
+  left: 5%;
+  display: block;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.quantitySpinner .plusButton {
+  position: absolute;
+  top: 25%;
+  right: 5%;
+  display: block;
+  z-index: 1;
+  cursor: pointer;
+}
+
+.valueBoxSquare {
+  position: absolute;
+  display: block;
+  top: 13%;
+  left: 38%;
+  width: 31px;
+  height: 31px;
+  background: #ffffff;
+  border-radius: 6px;
+}
+
+/* original quantity */
+#valueBox span {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 15%;
+  text-align: center;
+  line-height: 33px;
+  display: none;
+  font-size: 22px;
+  user-select: none;
+}
+
+#valueBox span:nth-child(1) {
+  display: initial;
+}
+
+/* blueberry quantity */
+#valueBoxBlueberry span {
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 100%;
+  top: 15%;
+  text-align: center;
+  line-height: 33px;
+  display: none;
+  font-size: 22px;
+  user-select: none;
+}
+
+#valueBoxBlueberry span:nth-child(1) {
+  display: initial;
+}
+
 .dummyAmountSelector {
   display: inline;
   float: left;
@@ -252,13 +517,51 @@ table {
 }
 
 .infoButton {
+  border: none;
+  background: none;
   display: inline;
   float: right;
   padding-right: 10px;
 }
 
 .optionsSeparater {
+  transition: height 0.3s ease-in-out;
   display: block;
+  width: auto;
+  height: 5px;
+  border-radius: 20px;
+  background-color: #ffd3f3;
+  margin: 64px 0px 0px;
+}
+
+.optionsSeparater:hover {
+  width: auto;
+  height: 100px;
+}
+
+.glazingGroup {
+  justify-content: center;
+}
+
+.glazingOptions {
+  border: none;
+  border-radius: 6px;
+}
+
+#glazingDropdownLabel {
+  font-family: Poppins;
+  font-weight: bold;
+  /* font-size: 10px;
+  line-height: 15px; */
+  display: flex;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.07em;
+}
+
+.glazingOption {
+  font-family: Poppins;
+  letter-spacing: 0.07em;
 }
 
 .originalOverlay {
