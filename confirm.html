@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
   <head>
     <title>Bun Bun</title>
@@ -12,20 +13,14 @@
     />
     <script defer src="./interactions.js" async></script>
   </head>
-</html>
 
-<body>
-  <!-- navbar start -->
-  <div class="contactUsBackground">
+  <body>
+    <!-- navbar start -->
     <div class="navbar">
       <!-- logo start -->
       <a href="./bunBunHome.html">
         <div class="icon">
-          <img
-            src="./Assets/logo.svg"
-            alt="Bun Bun logo"
-            class="logo"
-          />
+          <img src="./Assets/logo.svg" alt="Bun Bun logo" class="logo" />
           <h2 class="logoPrint">Bun Bun</h2>
         </div>
       </a>
@@ -34,11 +29,11 @@
         <ul>
           <!-- order now -->
           <li>
-            <a href="./packSize.html">order now</a>
+            <a href="./packSize.html" id="orderNowRect">order now</a>
           </li>
           <!-- contact us -->
           <li>
-            <a href="./contactUs.html" id="contactUsRect">contact us</a>
+            <a href="./contactUs.html">contact us</a>
           </li>
           <!-- shopping cart -->
           <li>
@@ -114,6 +109,8 @@
           <span class="cartTotal">$30</span>
         </li>
       </ul>
+      </ul>
+      </ul>
       <div class="cartActions">
         <button class="checkoutButton">
           <p>checkout</p>
@@ -124,29 +121,86 @@
       </div>
     </div>
 
-  <a href="./bunBunHome.html"
+    <!-- back button and progress bar -->
+    <div class="progress">
+      <a href="./packSize.html"
         ><img src="./Assets/backButton.svg" class="backButton"
       /></a>
-  <div class="form">
-    <h1 class="contactUsTopText">We love hearing from you!</h1>
-    <p class="contactUsBottomText">whether it’s feedback or suggestions 😄</p>
-    <form class="contactUsForm">
-      <input type="text" id="firstName" placeholder="first name">
-      <input type="text" id="lastName" placeholder="last name">
-      <input type="text" id="email" placeholder="email">
-      <input type="text" id="comment" placeholder="write your thoughts!">
-      <input type="submit" id="submit" value="submit">
-    </form>
-  </div>
-  <div class="socialMedia">
-    <h1>
-      <img src="./Assets/instagram.svg"/>
-      @eatbunbun
-    </h1>
-    <h1>
-      <img src="./Assets/twitter.svg"/>
-      @bunbunbakeshop
-    </h1>
-  </div>
-</body>
+      <img src="./Assets/progressBar3.svg" class="progressBarImg" />
+    </div>
+
+    <!-- progress bar labels -->
+    <div class="progressBarLabels">
+      <p class="progressBarLabel">pack size</p>
+      <p class="progressBarLabel">customize</p>
+      <p class="progressBarLabel">confirm</p>
+    </div>
+
+    <!-- cart summary-->
+    <div id="cartConfirm">
+      <ul>
+        <h1>
+          <img src="./Assets/shoppingCartImgForCart.svg" />
+          6 pack
+        </h1>
+        <li class="cartRow">
+          <img src="./Assets/originalCartImg.svg" />
+          <input class="cartQuantity" type="number" value="1" />Original
+          <span class="price">$5</span>
+          <button class="removeFromCart">
+            <img src="./Assets/cartClose.svg" />
+          </button>
+        </li>
+        <li class="cartRow">
+          <img src="./Assets/blueberryCartImg.svg" />
+          <input class="cartQuantity" type="number" value="1" />Blueberry
+          <span class="price">$5</span>
+          <button class="removeFromCart">
+            <img src="./Assets/cartClose.svg" />
+          </button>
+        </li>
+        <li class="cartRow">
+          <img src="./Assets/pumpkinSpiceCartImg.svg" />
+          <input class="cartQuantity" type="number" value="1" />Pumpkin Spice
+          <span class="price">$5</span>
+          <button class="removeFromCart">
+            <img src="./Assets/cartClose.svg" />
+          </button>
+        </li>
+        <li class="cartRow">
+          <img src="./Assets/caramelPecanCartImg.svg" />
+          <input class="cartQuantity" type="number" value="1" />Caramel Pecan
+          <span class="price">$5</span>
+          <button class="removeFromCart">
+            <img src="./Assets/cartClose.svg" />
+          </button>
+        </li>
+        <li class="cartRow">
+          <img src="./Assets/caramelPecanCartImg.svg" />
+          <input class="cartQuantity" type="number" value="1" />Original
+          (gluten-free)
+          <span class="price">$5</span>
+          <button class="removeFromCart">
+            <img src="./Assets/cartClose.svg" />
+          </button>
+        </li>
+        <li class="cartRow">
+          <img src="./Assets/caramelPecanCartImg.svg" />
+          <input class="cartQuantity" type="number" value="1" />Walnut
+          <span class="price">$5</span>
+          <button class="removeFromCart">
+            <img src="./Assets/cartClose.svg" />
+          </button>
+        </li>
+        <li>
+          <h2>total:</h2>
+          <span class="cartTotal">$30</span>
+        </li>
+      </ul>
+    </div>
+    <button class="addToCartButton" onclick="show()">
+      <img src="./Assets/shoppingCart.svg" />
+      <p>add to cart</p>
+    </button>
+  </body>
 </html>

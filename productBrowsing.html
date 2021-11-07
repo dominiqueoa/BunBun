@@ -11,7 +11,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
-    <script defer src="./interactions.js"></script>
+    <script defer src="./interactions.js" async></script>
   </head>
 
   <body>
@@ -58,27 +58,63 @@
         </h1>
         <li>
           <img src="./Assets/originalCartImg.svg" />
-          x3 Original
+          <input class="cartQuantity" type="number" value="1" />Original
+          <span class="price">$5</span>
+          <button class="removeFromCart">
+            <img src="./Assets/cartClose.svg" />
+          </button>
         </li>
         <li>
           <img src="./Assets/blueberryCartImg.svg" />
-          x1 Blueberry
+          <input class="cartQuantity" type="number" value="1" />Blueberry
+          <span class="price">$5</span>
+          <button class="removeFromCart">
+            <img src="./Assets/cartClose.svg" />
+          </button>
         </li>
         <li>
           <img src="./Assets/pumpkinSpiceCartImg.svg" />
-          x1 Pumpkin Spice
+          <input class="cartQuantity" type="number" value="1" />Pumpkin Spice
+          <span class="price">$5</span>
+          <button class="removeFromCart">
+            <img src="./Assets/cartClose.svg" />
+          </button>
         </li>
         <li>
           <img src="./Assets/caramelPecanCartImg.svg" />
-          x1 Caramel Pecan
+          <input class="cartQuantity" type="number" value="1" />Caramel Pecan
+          <span class="price">$5</span>
+          <button class="removeFromCart">
+            <img src="./Assets/cartClose.svg" />
+          </button>
+        </li>
+        <li>
+          <img src="./Assets/caramelPecanCartImg.svg" />
+          <input class="cartQuantity" type="number" value="1" />Original (GF)
+          <span class="price">$5</span>
+          <button class="removeFromCart">
+            <img src="./Assets/cartClose.svg" />
+          </button>
+        </li>
+        <li>
+          <img src="./Assets/caramelPecanCartImg.svg" />
+          <input class="cartQuantity" type="number" value="1" />Walnut
+          <span class="price">$5</span>
+          <button class="removeFromCart">
+            <img src="./Assets/cartClose.svg" />
+          </button>
+        </li>
+        <li>
+          <h2>total:</h2>
+          <span class="cartTotal">$30</span>
         </li>
       </ul>
       <div class="cartActions">
         <button class="checkoutButton">
-          <h1>checkout</h1>
+          <p>checkout</p>
         </button>
         <button class="continueShoppingButton">
-          <h1>continue shopping</h1>
+          <p>continue shopping</p>
         </button>
       </div>
     </div>
@@ -285,7 +321,9 @@
 
     <!-- next button -->
     <div>
-      <img src="./Assets/inactiveNextButton.svg" class="inactiveNext" />
+      <a href="./confirm.html">
+        <img src="./Assets/activeNextButton.svg" class="inactiveNext"
+      /></a>
     </div>
 
     <!-- original overlay -->

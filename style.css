@@ -110,6 +110,7 @@ ul li a:hover {
   margin-top: -8px;
   border: none;
   background: none;
+  cursor: pointer;
 }
 
 #orderNowRect {
@@ -136,7 +137,7 @@ ul li a:hover {
 #cart {
   position: fixed;
   right: 0;
-  left: 75%;
+  left: 72%;
   top: 0;
   bottom: 0;
   height: 100%;
@@ -151,6 +152,10 @@ ul li a:hover {
   transform: translateX(0%);
 }
 
+#cart h2 {
+  display: inline;
+}
+
 .cartClose {
   position: relative;
   display: block;
@@ -158,6 +163,7 @@ ul li a:hover {
   left: 2%;
   border: none;
   background: none;
+  cursor: pointer;
 }
 
 #cart h1 {
@@ -174,6 +180,19 @@ ul li a:hover {
   float: left;
 }
 
+.removeFromCart {
+  width: 15px;
+  height: 15px;
+  padding-left: 10px;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+.price {
+  margin: 0px 20px;
+}
+
 .cartActions button {
   border: none;
   background: #ffd3f3;
@@ -187,7 +206,7 @@ ul li a:hover {
   height: 45px;
 }
 
-.checkoutButton h1 {
+.checkoutButton p {
   font-family: Poppins;
   font-weight: bold;
   font-size: 23px;
@@ -200,7 +219,7 @@ ul li a:hover {
   height: 45px;
 }
 
-.continueShoppingButton h1 {
+.continueShoppingButton p {
   font-family: Poppins;
   font-weight: bold;
   font-size: 23px;
@@ -768,4 +787,63 @@ td img {
   font-family: Poppins;
   font-size: 31px;
   color: #ffffff;
+}
+
+#cartConfirm {
+  display: flex;
+  margin: 20px auto;
+  justify-content: space-around;
+  transition: 0.5s ease-in-out;
+  z-index: 10;
+  height: 400px;
+  overflow: scroll;
+}
+
+.addToCartButton {
+  padding-left: 15px;
+  padding-right: 15px;
+  display: flex;
+  margin: 10px auto;
+  width: 255px;
+  height: 54px;
+  justify-content: space-between;
+  align-items: center;
+  background: #ffd3f3;
+  box-shadow: -6px 6px 0px #fa87da;
+  border: none;
+  border-radius: 8px;
+  font-family: Poppins;
+  font-weight: bold;
+  font-size: 26px;
+  color: #af8066;
+  cursor: pointer;
+}
+
+#cartConfirm ul {
+  list-style: none;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: flex-start;
+}
+
+#cartConfirm h2 {
+  display: inline;
+}
+
+.cartTotal {
+  font-size: 24px;
+  font-weight: bold;
+  display: inline;
+  padding-left: 10px;
+}
+
+.cartQuantity {
+  width: 25px;
+  margin: 0px 10px;
+  border: 3px solid #fa87da;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 1px rgba(0, 0, 0, 0.25);
+  font-family: Poppins;
 }

@@ -10,6 +10,7 @@
       href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;700&display=swap"
       rel="stylesheet"
     />
+    <script defer src="./interactions.js" async></script>
   </head>
 
   <body>
@@ -32,15 +33,89 @@
               <a href="./contactUs.html">contact us</a>
             </li>
             <!-- shopping cart -->
-            <li>
-              <a href="#"
-                ><img src="./Assets/shoppingCart.svg" class="shoppingCart"
-              /></a>
-            </li>
-          </ul>
-        </div>
+          <li>
+            <button class="shoppingCart" onclick="show()">
+              <img src="./Assets/shoppingCart.svg" alt="shoppingCartButton" />
+            </button>
+          </li>
+        </ul>
       </div>
     </div>
+    <!-- navbar end-->
+
+    <div id="cart">
+      <button class="cartClose" onclick="closeCart()">
+        <img src="./Assets/cartClose.svg" />
+      </button>
+
+      <ul>
+        <h1>
+          <img src="./Assets/shoppingCartImgForCart.svg" />
+          6 pack
+        </h1>
+        <li>
+          <img src="./Assets/originalCartImg.svg" />
+          <input class="cartQuantity" type="number" value="1" />Original
+          <span class="price">$5</span>
+          <button class="removeFromCart">
+            <img src="./Assets/cartClose.svg" />
+          </button>
+        </li>
+        <li>
+          <img src="./Assets/blueberryCartImg.svg" />
+          <input class="cartQuantity" type="number" value="1" />Blueberry
+          <span class="price">$5</span>
+          <button class="removeFromCart">
+            <img src="./Assets/cartClose.svg" />
+          </button>
+        </li>
+        <li>
+          <img src="./Assets/pumpkinSpiceCartImg.svg" />
+          <input class="cartQuantity" type="number" value="1" />Pumpkin Spice
+          <span class="price">$5</span>
+          <button class="removeFromCart">
+            <img src="./Assets/cartClose.svg" />
+          </button>
+        </li>
+        <li>
+          <img src="./Assets/caramelPecanCartImg.svg" />
+          <input class="cartQuantity" type="number" value="1" />Caramel Pecan
+          <span class="price">$5</span>
+          <button class="removeFromCart">
+            <img src="./Assets/cartClose.svg" />
+          </button>
+        </li>
+        <li>
+          <img src="./Assets/caramelPecanCartImg.svg" />
+          <input class="cartQuantity" type="number" value="1" />Original (GF)
+          <span class="price">$5</span>
+          <button class="removeFromCart">
+            <img src="./Assets/cartClose.svg" />
+          </button>
+        </li>
+        <li>
+          <img src="./Assets/caramelPecanCartImg.svg" />
+          <input class="cartQuantity" type="number" value="1" />Walnut
+          <span class="price">$5</span>
+          <button class="removeFromCart">
+            <img src="./Assets/cartClose.svg" />
+          </button>
+        </li>
+        <li>
+          <h2>total:</h2>
+          <span class="cartTotal">$30</span>
+        </li>
+      </ul>
+      <div class="cartActions">
+        <button class="checkoutButton">
+          <p>checkout</p>
+        </button>
+        <button class="continueShoppingButton">
+          <p>continue shopping</p>
+        </button>
+      </div>
+    </div>
+
     <img src="./Assets/homepageBackground1.svg" class="welcomeMe" />
     <p class="homepageCopy">We deliver across Pittsburgh!</p>
     <div class="getStarted">

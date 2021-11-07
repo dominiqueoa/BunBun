@@ -2,6 +2,32 @@ const openModalButtons = document.querySelectorAll("[data-modal-target]")
 const closeModalButtons = document.querySelectorAll("[data-close-button]")
 const overlay = document.getElementById("overlay")
 
+var removeFromCartButton = document.getElementsByClassName("removeFromCart")
+
+for (var i = 0; i < removeFromCartButton.length; i++) {
+  var button = removeFromCartButton[i]
+  button.addEventListener("click", (event) => {
+    var buttonClicked = event.target
+    buttonClicked.parentElement.parentElement.remove()
+    updateCartTotal()
+  })
+}
+
+function updateCartTotal() {
+  var cartItemContainer = document.getElementById("cartConfirm")[0]
+  var cartRows = cartItemContainer.getElementsByClassName("cartRow")
+  var total = 0
+  for (var i = 0; i < cartRows.length; i++) {
+    var cartRow = cartRows[i]
+    var priceElement = cartRow.getElementsByClassName("price")[0]
+    var quantityElement = cartRow.getElementsByClassName("cartQuantity")[0]
+    var price = parseFloat(priceElement.innerText.replace("$", ""))
+    var quantity = quantityElement.value
+    total = total + price * quantity
+  }
+  document.getElementsByClassName("cartTotal")[0].innerText = "$" + total
+}
+
 // original
 openModalButtons.forEach((button) => {
   button.addEventListener("click", () => {
